@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="nav-part-1">
+                <a href="index.html">
+                    <img src="images/nike-logo-0.png" alt="logo">
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-part-2">
+                <i class="ri-search-line"></i>
+                <a href="Cart.html" class="cart-icon">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <div class="cart-page">
+            <h2>Ваш кошик</h2>
+            <div class="cart-items"></div>
+            <div class="cart-summary">
+                <p>Сума: <span id="cart-total"></span> грн</p>
+                <button class="checkout-btn">Оформити замовлення</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

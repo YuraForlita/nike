@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="stylecontactus.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="nav-part-1">
+                <a href="index.html">
+                    <img src="images/nike-logo-0.png" alt="logo">
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-part-2">
+                <i class="ri-search-line"></i>
+                <a href="Cart.html">
+                    <i class="ri-shopping-cart-2-line"></i>
+                </a>
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+            <header>
+                <h1>Contact us</h1>
+            </header>
+                <section class="contact-form">
+                    <h2>We are always happy to help you!</h2>
+                    <form action="submit_form.php" method="post"> <!-- Змінити на вашу обробку -->
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+        
+                        <button type="submit" onclick="handleSubmit(event)">Send</button>
+                    </form>
+                </section>
+    </div>
+</body>
+</html>
+
+<script>
+    function handleSubmit(event) {
+        event.preventDefault(); // Зупиняє стандартну відправку форми
+        // Тут можна додати код для обробки даних форми, наприклад, AJAX запит
+        // Після успішної обробки:
+        window.location.href = 'contacttnx.html'; // Замість example.com вставте ваше посилання
+    }
+</script>

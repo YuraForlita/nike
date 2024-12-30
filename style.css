@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: #d0d4D5;
+}
+
+.main{
+    height: 35vw;
+    width: 100%;
+    background-color: #d0d4D5;
+}
+
+.nav{
+    height: 5.78vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.63vw;
+}
+
+.nav-part-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.nav img{
+    height: 4.21vw;
+    width: auto;
+    margin-right: 3.15vw;
+    cursor: pointer;
+}
+
+.nav-part-1 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-part-1 ul li{
+    margin-right: 2.1vw;
+    font-size: 1vw;
+    font-weight: 500;
+    /*text-transform: uppercase;*/
+    cursor: pointer;
+}
+
+.nav-part-1 ul li a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    width: 3.68vw;
+    line-height: 2.1vw;
+    text-align: center;
+    position: relative;
+    user-select: none;
+    border: none;
+    padding: 0;
+}
+
+
+.nav-part-1 ul li a:hover {
+    color: #666666;
+}
+
+
+.nav-part-2 i{
+    margin-right: 2.1vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-part-2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-part-2 a:visited,
+.nav-part-2 a:hover,
+.nav-part-2 a:active {
+    color: inherit;
+}
+.cart-icon {
+    position: relative;
+    font-size: 1.26vw;
+}
+
+.cart-count {
+    position: absolute;
+    top: -0.42vw;
+    right: 3.15vw;
+    background-color: #ff4d4d; /* Червоний колір фону для кружечка */
+    color: white;             /* Білий текст */
+    border-radius: 50%;       /* Робимо кружечок */
+    padding: 0.1vw 0.31vw;         /* Відступи для збільшення розміру */
+    font-size: 0.63vw;          /* Розмір тексту */
+    font-weight: bold;
+    min-width: 1.05vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    height: calc(100% - 5.78vw);
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.sale-banner {
+    position: absolute;
+    left: 0;
+    top: 5.73vw;
+    bottom: 0;
+    width: 3vw;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: bold;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    z-index: 999;
+    height: 19.6vw;
+    letter-spacing: 0.50vw;
+    box-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 1);
+}
+
+.content-left{
+    height: 100%;
+    width: 40%;
+    padding: 4.21vw 5.26vw;
+}
+
+.content-left h5{
+    font-size: 1.05vw;
+    text-transform: capitalize;
+    color: #555;
+    margin-bottom: 0.52vw;
+}
+
+.content-left h1{
+    font-size: 2.89vw;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 1.31vw;
+}
+
+.content-left p{
+    font-size: 1.05vw;
+    color: #000;
+    width: 80%;
+    margin-bottom: 1.57vw;
+}
+
+.btn{
+    background-color: #000;
+    color: #fff;
+    font-size: 0.78vw;
+    padding: 0.63vw 2.1vw;
+    font-weight: 600;
+    border: none;
+    border-radius: 2.63vw;
+    border-top-left-radius: 0;
+}
+
+.content-right{
+    height: 100%;
+    width: 30%;
+    padding: 5.78vw 5.26vw;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+
+.content-right::-webkit-scrollbar{
+    display: none;
+}
+
+.product{
+    height: 19.47vw;
+    width: 13.15vw;
+    background-color: #1011;
+    position: relative;
+    box-shadow: 0 0.26vw 0.52vw rgba(17, 0, 17, 0.3);
+    display: inline-block;
+    margin-right: 1.05vw;
+    overflow: hidden;
+}
+
+.product img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 20%;
+}
+
+.product h4{
+    font-size: 0.94vw;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 28%;
+    margin-left: 5%;
+}
+
+.catagory{
+    position: absolute;
+    bottom: 20%;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-left: 5%;
+    font-size: 0.95vw;
+}
+
+.color{
+    position: absolute;
+    bottom: 15%;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-left: 5%;
+    font-size: 0.95vw;
+}
+
+.price{
+    font: 18px;
+    position: absolute;
+    bottom: 5%;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 5%;
+    font-size: 0.95vw;
+}
+
+.content-right {
+    overflow: hidden; 
+    position: relative;
+    white-space: nowrap;
+}
+
+.product-list {
+    display: inline-flex;
+}
+.marquee {
+    display: inline-block;
+    animation: scroll 106s linear infinite;
+    will-change: transform;
+}
+@keyframes scroll {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.marquees {
+    display: inline-block;
+    animation: scroll 112s linear infinite;
+    will-change: transform;
+}
+@keyframes scroll {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.producte {
+    height: 19.47vw;
+    width: 13.15vw;
+    background-color: #1011;
+    position: relative;
+    box-shadow: 0 0.26vw 0.52vw rgba(17, 0, 17, 0.3);
+    display: inline-block;
+    margin-right: 1.05vw;
+    overflow: hidden;
+}
+
+.producte::before {
+    content: "ЗНИЖКА";
+    position: absolute;
+    top: 4%;
+    left: -15%;
+    background-color: black;
+    color: white;
+    padding: 0.5vw 3vw;
+    font-size: 0.9vw;
+    font-weight: bold;
+    transform: rotate(-32deg);
+    z-index: 1;
+}
+
+.producte img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 20%;
+}
+
+.producte h4{
+    font-size: 0.94vw;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 28%;
+    margin-left: 5%;
+}
+
+.catagorys{
+    position: absolute;
+    bottom: 20%;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-left: 5%;
+    font-size: 0.95vw;
+}
+
+.colore{
+    position: absolute;
+    bottom: 15%;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-left: 5%;
+    font-size: 0.95vw;
+}
+
+.producte .prices {
+    font: 18px;
+    position: absolute;
+    bottom: 5%;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 5%;
+    font-size: 0.95vw;
+    color: #fa0000;
+}
+
+.producte .old-prices {
+    font-size: 0.8vw;
+    font-weight: 400;
+    color: gray;
+    text-decoration: line-through;
+    position: absolute;
+    bottom: 10%;
+    margin-left: 5%;
+}
+
+.container {
+    text-align: center;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-family: "Anton SC", sans-serif;
+    font-size: 3.78vw;
+    margin: 1.05vw 0;
+    font-weight: bold;
+    letter-spacing: 0.20vw;
+    color: #fff;
+    background-color: #000;
+  }
+
+  .text1{
+    font-size: 1.5vw;
+    margin: 0.26vw 0;
+    color: #fff;
+    background-color: #000;
+  }
+
+  .photo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -8.36vw;
+  }
+
+  .photo-item {
+    width: 30%;
+    position: relative;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .photo-item:nth-child(2) .photo {
+    height: auto;
+    width: 100%;
+  }
+
+  .button {
+    position: absolute;
+    bottom: 0.52vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.72vw 1.45vw;
+    font-size: 0.84vw;
+    border-radius: 1.05vw;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+
+  .text2 {
+    margin-top: 0.52vw;
+  }
+
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 30vw;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.contentes {
+    position: absolute;
+    top: 70%;
+    left: 17.89vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.contentes h1 {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 4.5vw;
+    margin-bottom: 1.05vw;
+}
+
+.contentes p {
+    font-size: 1vw;
+}

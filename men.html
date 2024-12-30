@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="menshop.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="nav-part-1">
+                <a href="index.html">
+                    <img src="images/nike-logo-0.png" alt="logo">
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-part-2">
+                <i class="ri-search-line"></i>
+                <a href="Cart.html" class="cart-icon">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<div class="page-wrapper">
+<div class="container">
+    <!-- Панель фільтрів -->
+    <aside class="filters">
+        <h2>Фільтри</h2>
+        <div class="filter-section">
+            <label for="price">Price:</label>
+            <div class="price-inputs">
+                <input type="text" placeholder="від" class="price-input">
+                <span>—</span>
+                <input type="text" placeholder="до" class="price-input">
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <label>Категорія:</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="promo" name="promo">
+                    <label for="promo">Акції</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="new" name="new">
+                    <label for="new">Новинки</label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-section">
+            <label>Size:</label>
+            <select id="shoeSize">
+                <option value="">Choose a size</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+            </select>
+        </div>
+        <!-- Додаткові фільтри можна додати тут -->
+    </aside>
+
+    <section class="product-view">
+        <div class="view-controls">
+            <div class="custom-select">
+                <div class="selected-option" onclick="toggleOptions()"> <!-- Поточний вибір -->
+                    <i id="currentIcon" class="ri-layout-grid-line"></i>
+                    <span id="currentText">Choose view</span>
+                </div>
+                <div id="options" class="options">
+                    <div class="option" onclick="setCustomView('grid')">
+                        <i class="ri-layout-grid-line"></i> Grid
+                    </div>
+                    <div class="option" onclick="setCustomView('list')">
+                        <i class="ri-list-check-2"></i> Big list
+                    </div>
+                    <div class="option" onclick="setCustomView('compact-list')">
+                        <i class="ri-list-unordered"></i> Small list
+                    </div>
+                </div>
+            </div>
+           <select name="sort" id="sort">
+                <option value="popular">The most popular</option>
+                <option value="price-asc">By price increase</option>
+                <option value="price-desc">За спаданням ціни</option>
+            </select>
+        </div>
+
+        <div id="products" class="grid">
+            <div class="product">
+                <img src="images/men/Nike Air Force 1 x.png" alt="Nike Air Max">
+                <h3>Nike Air Force 1 x</h3>
+                <div class="product-details">
+                    <p class="price">$215.00</p>
+                    <button onclick="addToCart('Nike Air Force 1 x', 215)">Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Jordan 4.png" alt="Nike Air Jordan 4">
+                <h3>Nike Air Jordan 4</h3>
+                <div class="product-details">
+                    <p class="price">$185.00</p>
+                    <button onclick="addToCart('Nike Air Jordan 4', 185, 'images/men/Nike Air Jordan 4.png')">Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Max Axis.png" alt="Nike Air Max">
+                <h3>Nike Air Max Axis</h3>
+                <div class="product-details">
+                    <p class="price">$120.00</p>
+                    <button onclick="addToCart('Nike Air Max Axis', 120)">Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Jordan Retro 4  2.png" alt="Nike Revolution">
+                <h3>Nike Air Jordan Retro 4</h3>
+                <div class="product-details">
+                    <p class="price">$155.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Force x.png" alt="Nike Air Max">
+                <h3>Nike Air Force x</h3>
+                <div class="product-details">
+                    <p class="price">$199.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike SB Dunk Low X 1.png" alt="Nike Air Max">
+                <h3>Nike SB Dunk Low X</h3>
+                <div class="product-details">
+                    <p class="price">$110.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Monarch IV.png" alt="Nike Revolution">
+                <h3>Nike Air Monarch IV</h3>
+                <div class="product-details">
+                    <p class="price">$90.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Jordan Retro 4.png" alt="Nike Air Max">
+                <h3>Nike Air Jordan Retro 4</h3>
+                <div class="product-details">
+                    <p class="price">$145.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Zoom Spiridon.png" alt="Nike Revolution">
+                <h3>Nike Air Zoom Spiridon</h3>
+                <div class="product-details">
+                    <p class="price">$125.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike SB Dunk Low X.png" alt="Nike Air Max">
+                <h3>Nike SB Dunk Low X</h3>
+                <div class="product-details">
+                    <p class="price">$130.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Huarache Winter.png" alt="Nike Air Max">
+                <h3>Nike Air Jordan Retro 4</h3>
+                <div class="product-details">
+                    <p class="price">$200.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Air Monarch Iv 2.png" alt="Nike Revolution">
+                <h3>Nike Air Monarch IV</h3>
+                <div class="product-details">
+                    <p class="price">$170.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike Jordan 4 Retro.png" alt="Nike Air Max">
+                <h3>Nike Jordan 4 Retro</h3>
+                <div class="product-details">
+                    <p class="price">$180.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="images/men/Nike M2K Tekno.png" alt="Nike Air Max">
+                <h3>Nike SB Dunk Low X</h3>
+                <div class="product-details">
+                    <p class="price">$85.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+<script src="script.js"></script>
+</html>
